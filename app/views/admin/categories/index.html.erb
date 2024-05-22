@@ -1,0 +1,23 @@
+<h1>Categories</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.name %></td>
+        <td>
+          <!-- Add any actions you need here, e.g., edit or delete in the future -->
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Category', new_admin_category_path, class: 'btn btn-primary' %>
+

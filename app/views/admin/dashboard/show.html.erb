@@ -19,11 +19,7 @@
           <div class="card-body">
             <h5 class="card-title">Total Categories</h5>
             <p class="card-text"><%= @category_count %></p>
-            <% if Category.any? %>
-              <a href="<%= category_path(Category.first) %>" class="btn btn-primary">View Categories</a>
-            <% else %>
-              <a href="#" class="btn btn-primary disabled">View Categories</a>
-            <% end %>
+            <a href="<%= admin_categories_path %>" class="btn btn-primary">View Categories</a>
           </div>
         </div>
       </div>
