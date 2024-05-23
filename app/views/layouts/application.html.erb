@@ -10,8 +10,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
   <%= render 'layouts/top_nav' %>
+
+  <div class="container mt-4">
+    <% if flash[:notice] %>
+      <div class="alert alert-success">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+
+    <% if flash[:alert] %>
+      <div class="alert alert-danger">
+        <%= flash[:alert] %>
+      </div>
+    <% end %>
+  </div>
 
   <main class="container">
     <%= yield %>
@@ -29,4 +42,8 @@
   </footer>
 </body>
 </html>
+
+
+
+
 
